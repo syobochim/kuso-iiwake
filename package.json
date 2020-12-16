@@ -1,0 +1,37 @@
+{
+  "name": "kuso-iiwake",
+  "version": "1.0.0",
+  "author": "syobochim <syobochim@gmail.com> (https://github.com/syobochim)",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^11.1.0",
+    "electron-builder": "^22.9.1",
+    "electron-notarize": "^1.0.0",
+    "electron-packager": "^15.1.0"
+  },
+
+  "repository": "https://github.com/syobochim/kuso-iiwake",
+  "publish": {
+    "provider": "github",
+    "owner": "syobochim",
+    "repo": "kuso-iiwake",
+    "releaseType": "release"
+  },
+  "build": {
+    "appId": "com.syobochim.kuso-iiwake",
+    "afterSign": "scripts/notarize.js",
+    "mac": {
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false,
+      "entitlements": "entitlements.mac.plist",
+      "entitlementsInherit": "entitlements.mac.plist"
+    }
+  }
+}

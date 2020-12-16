@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>オンライン飲み会を終ろう</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval'">
+    <link rel="stylesheet" type="text/css" href="public/kathamo.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <audio id="aka-naki" preload loop>
+        <source src="audio/aka-naki.mp3" type="audio/mp3">
+    </audio>
+    <audio id="aka-hanashi" preload loop>
+        <source src="audio/aka-hanashi.mp3" type="audio/mp3">
+    </audio>
+    <audio id="sucker" preload loop>
+        <source src="audio/sucker.mp3" type="audio/mp3">
+    </audio>
+    <audio id="himei" preload loop>
+        <source src="audio/sucker.mp3" type="audio/mp3">
+    </audio>
+    <audio id="bakuhatsu" preload loop>
+        <source src="audio/bakuhatsu.mp3" type="audio/mp3">
+    </audio>
+    <div class="container">
+        <h1>オンライン飲み会を終ろう</h1>
+        <form id="reason">
+            <input name="reason" type="radio" value="aka-naki">すみません、赤ちゃんが泣いてるので <br>
+            <input name="reason" type="radio" value="aka-hanashi">もう、静かに。今仕事中だから。すみません、赤ちゃんが話しかけて来てるので <br>
+            <input name="reason" type="radio" value="sucker">近所でサッカー観戦が始まったみたいなので、 <br>
+            <input name="reason" type="radio" value="himei">何か悲鳴が聞こえる？！ <br>
+            <input name="reason" type="radio" value="bakuhatsu">何かが爆発したみたいなので <br>
+        </form>
+        <p>
+            <button data-role="button" type="button" id="button">失礼します。 😫</button>
+        </p>
+        <p>
+            <button data-role="button" type="button" id="bye">抜け出し成功 😏</button>
+        </p>
+    </div>
+    <script src="public/index.js"></script>
+</body>
+
+</html>
