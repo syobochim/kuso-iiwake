@@ -1,37 +1,31 @@
 {
-  "name": "kuso-iiwake",
-  "version": "1.0.0",
-  "author": "syobochim <syobochim@gmail.com> (https://github.com/syobochim)",
-  "description": "",
-  "main": "main.js",
+  "name": "kusoapp",
+  "version": "0.1.0",
+  "bin": {
+    "kusoapp": "bin/kusoapp.js"
+  },
   "scripts": {
-    "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk"
   },
-  "keywords": [],
-  "license": "ISC",
   "devDependencies": {
-    "electron": "^11.1.0",
-    "electron-builder": "^22.9.1",
-    "electron-notarize": "^1.0.0",
-    "electron-packager": "^15.1.0"
+    "@aws-cdk/assert": "1.74.0",
+    "@types/jest": "^26.0.10",
+    "@types/node": "10.17.27",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.2.0",
+    "aws-cdk": "1.74.0",
+    "ts-node": "^8.1.0",
+    "typescript": "~3.9.7"
   },
-
-  "repository": "https://github.com/syobochim/kuso-iiwake",
-  "publish": {
-    "provider": "github",
-    "owner": "syobochim",
-    "repo": "kuso-iiwake",
-    "releaseType": "release"
-  },
-  "build": {
-    "appId": "com.syobochim.kuso-iiwake",
-    "afterSign": "scripts/notarize.js",
-    "mac": {
-      "hardenedRuntime": true,
-      "gatekeeperAssess": false,
-      "entitlements": "entitlements.mac.plist",
-      "entitlementsInherit": "entitlements.mac.plist"
-    }
+  "dependencies": {
+    "@aws-cdk/aws-cloudfront": "^1.78.0",
+    "@aws-cdk/aws-iam": "^1.78.0",
+    "@aws-cdk/aws-s3": "^1.78.0",
+    "@aws-cdk/aws-s3-deployment": "^1.78.0",
+    "@aws-cdk/core": "1.74.0",
+    "source-map-support": "^0.5.16"
   }
 }
